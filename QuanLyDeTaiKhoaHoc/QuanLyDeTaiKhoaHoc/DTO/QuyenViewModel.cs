@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace QuanLyDeTaiKhoaHoc.DTO
 {
-    public class QuyenAccountViewModel
+    public class QuyenViewModel
     {
-        public QuyenAccountViewModel()
+        public QuyenViewModel()
         {
 
         }
 
-        public QuyenAccountViewModel(QuyenAccount dataQuyenAccount)
+        public QuyenViewModel(Quyen dataQuyenAccount)
         {
             MaQuyen = dataQuyenAccount.MaQuyen;
             TenQuyen = dataQuyenAccount.TenQuyen;

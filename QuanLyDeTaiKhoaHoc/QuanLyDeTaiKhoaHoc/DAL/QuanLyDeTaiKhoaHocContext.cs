@@ -14,7 +14,7 @@ namespace QuanLyDeTaiKhoaHoc.DAL
         }
 
         public DbSet<Account> Accounts { get; set; }
-        public DbSet<QuyenAccount> QuyenAccounts { get; set; }
+        public DbSet<Quyen> Quyens { get; set; }
         public DbSet<ChuNhiem> ChuNhiems { get; set; }
 
 

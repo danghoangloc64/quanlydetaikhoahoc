@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace QuanLyDeTaiKhoaHoc.Model
 {
@@ -10,7 +11,6 @@ namespace QuanLyDeTaiKhoaHoc.Model
         public DateTime? NgaySinh { get; set; }
         public string MatKhau { get; set; }
 
-        public Guid QuyenAccountId { get; set; }
-        public virtual QuyenAccount QuyenAccount { get; set; }
+        public virtual ICollection<Quyen> QuyenAccounts { get; set; }
     }
 }

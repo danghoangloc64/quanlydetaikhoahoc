@@ -48,7 +48,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             this.tabPaneChuNhiem.SelectedPage = this.tabNavigationPage;
             this.tabPaneChuNhiem.Size = new System.Drawing.Size(762, 450);
             this.tabPaneChuNhiem.TabIndex = 0;
-            this.tabPaneChuNhiem.Text = "tabPane1";
+            this.tabPaneChuNhiem.Text = "tabPane";
             this.tabPaneChuNhiem.Click += new System.EventHandler(this.tabPaneChuNhiem_Click);
             // 
             // tabNavigationPage

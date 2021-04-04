@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyDeTaiKhoaHoc.Model
 {
-    public class QuyenAccount : AuditableEntity<Guid>
+    public class Quyen : AuditableEntity<Guid>
     {
         public string MaQuyen { get; set; }
         public string TenQuyen { get; set; }

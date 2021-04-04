@@ -20,7 +20,9 @@ namespace QuanLyDeTaiKhoaHoc.Views
 
         private void tabPaneChuNhiem_Click(object sender, EventArgs e)
         {
-
+            ChuNhiemUserControl chuNhiemUserControl = new ChuNhiemUserControl();
+            chuNhiemUserControl.Dock = DockStyle.Fill;
+            tabNavigationPage.Controls.Add(chuNhiemUserControl);
         }
     }
 }

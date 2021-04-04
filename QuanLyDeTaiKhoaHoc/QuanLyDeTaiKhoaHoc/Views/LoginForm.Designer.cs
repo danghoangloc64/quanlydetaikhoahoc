@@ -37,9 +37,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             this.TenDangNhapTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.accountLoginModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MatKhauTextEdit = new DevExpress.XtraEditors.TextEdit();
-            this.QuyenSearchLookUpEdit = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.quyenAccountViewModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.QuyenComboBoxEdit = new DevExpress.XtraEditors.ComboBoxEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -57,9 +55,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             ((System.ComponentModel.ISupportInitialize)(this.TenDangNhapTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountLoginModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MatKhauTextEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuyenSearchLookUpEdit.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenAccountViewModelBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuyenComboBoxEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
@@ -81,7 +77,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             this.dataLayoutControl1.Controls.Add(this.labelControl1);
             this.dataLayoutControl1.Controls.Add(this.TenDangNhapTextEdit);
             this.dataLayoutControl1.Controls.Add(this.MatKhauTextEdit);
-            this.dataLayoutControl1.Controls.Add(this.QuyenSearchLookUpEdit);
+            this.dataLayoutControl1.Controls.Add(this.QuyenComboBoxEdit);
             this.dataLayoutControl1.DataSource = this.accountLoginModelBindingSource;
             this.dataLayoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataLayoutControl1.Location = new System.Drawing.Point(0, 0);
@@ -93,7 +89,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             // 
             // btnForgot
             // 
-            this.btnForgot.Location = new System.Drawing.Point(187, 151);
+            this.btnForgot.Location = new System.Drawing.Point(187, 164);
             this.btnForgot.Name = "btnForgot";
             this.btnForgot.Size = new System.Drawing.Size(173, 22);
             this.btnForgot.StyleController = this.dataLayoutControl1;
@@ -103,7 +99,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(12, 151);
+            this.btnLogin.Location = new System.Drawing.Point(12, 164);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(171, 22);
             this.btnLogin.StyleController = this.dataLayoutControl1;
@@ -133,6 +129,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             this.TenDangNhapTextEdit.Size = new System.Drawing.Size(264, 20);
             this.TenDangNhapTextEdit.StyleController = this.dataLayoutControl1;
             this.TenDangNhapTextEdit.TabIndex = 9;
+            this.TenDangNhapTextEdit.Leave += new System.EventHandler(this.TenDangNhapTextEdit_Leave);
             // 
             // accountLoginModelBindingSource
             // 
@@ -141,38 +138,25 @@ namespace QuanLyDeTaiKhoaHoc.Views
             // MatKhauTextEdit
             // 
             this.MatKhauTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountLoginModelBindingSource, "MatKhau", true));
-            this.MatKhauTextEdit.Location = new System.Drawing.Point(96, 85);
+            this.MatKhauTextEdit.Location = new System.Drawing.Point(96, 109);
             this.MatKhauTextEdit.Name = "MatKhauTextEdit";
+            this.MatKhauTextEdit.Properties.UseSystemPasswordChar = true;
             this.MatKhauTextEdit.Size = new System.Drawing.Size(264, 20);
             this.MatKhauTextEdit.StyleController = this.dataLayoutControl1;
             this.MatKhauTextEdit.TabIndex = 10;
             // 
-            // QuyenSearchLookUpEdit
+            // QuyenComboBoxEdit
             // 
-            this.QuyenSearchLookUpEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountLoginModelBindingSource, "Quyen", true));
-            this.QuyenSearchLookUpEdit.Location = new System.Drawing.Point(96, 109);
-            this.QuyenSearchLookUpEdit.Name = "QuyenSearchLookUpEdit";
-            this.QuyenSearchLookUpEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.QuyenComboBoxEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountLoginModelBindingSource, "Quyen", true));
+            this.QuyenComboBoxEdit.Location = new System.Drawing.Point(96, 85);
+            this.QuyenComboBoxEdit.Name = "QuyenComboBoxEdit";
+            this.QuyenComboBoxEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.QuyenSearchLookUpEdit.Properties.DataSource = this.quyenAccountViewModelBindingSource;
-            this.QuyenSearchLookUpEdit.Properties.DisplayMember = "MaQuyen";
-            this.QuyenSearchLookUpEdit.Properties.NullText = "";
-            this.QuyenSearchLookUpEdit.Properties.PopupView = this.searchLookUpEdit1View;
-            this.QuyenSearchLookUpEdit.Properties.ValueMember = "MaQuyen";
-            this.QuyenSearchLookUpEdit.Size = new System.Drawing.Size(264, 20);
-            this.QuyenSearchLookUpEdit.StyleController = this.dataLayoutControl1;
-            this.QuyenSearchLookUpEdit.TabIndex = 11;
-            // 
-            // quyenAccountViewModelBindingSource
-            // 
-            this.quyenAccountViewModelBindingSource.DataSource = typeof(QuanLyDeTaiKhoaHoc.DTO.QuyenAccountViewModel);
-            // 
-            // searchLookUpEdit1View
-            // 
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.QuyenComboBoxEdit.Properties.PopupSizeable = true;
+            this.QuyenComboBoxEdit.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.QuyenComboBoxEdit.Size = new System.Drawing.Size(264, 20);
+            this.QuyenComboBoxEdit.StyleController = this.dataLayoutControl1;
+            this.QuyenComboBoxEdit.TabIndex = 11;
             // 
             // layoutControlGroup1
             // 
@@ -225,7 +209,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             this.emptySpaceItem2.AllowHotTrack = false;
             this.emptySpaceItem2.Location = new System.Drawing.Point(0, 121);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(352, 18);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(352, 31);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
@@ -239,7 +223,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.btnLogin;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 139);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 152);
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(175, 26);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -248,15 +232,15 @@ namespace QuanLyDeTaiKhoaHoc.Views
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 165);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(0, 178);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(352, 25);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(352, 12);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.btnForgot;
-            this.layoutControlItem3.Location = new System.Drawing.Point(175, 139);
+            this.layoutControlItem3.Location = new System.Drawing.Point(175, 152);
             this.layoutControlItem3.Name = "layoutControlItem3";
             this.layoutControlItem3.Size = new System.Drawing.Size(177, 26);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
@@ -274,7 +258,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             // ItemForMatKhau
             // 
             this.ItemForMatKhau.Control = this.MatKhauTextEdit;
-            this.ItemForMatKhau.Location = new System.Drawing.Point(0, 73);
+            this.ItemForMatKhau.Location = new System.Drawing.Point(0, 97);
             this.ItemForMatKhau.Name = "ItemForMatKhau";
             this.ItemForMatKhau.Size = new System.Drawing.Size(352, 24);
             this.ItemForMatKhau.Text = "Mật khẩu";
@@ -282,8 +266,8 @@ namespace QuanLyDeTaiKhoaHoc.Views
             // 
             // ItemForQuyen
             // 
-            this.ItemForQuyen.Control = this.QuyenSearchLookUpEdit;
-            this.ItemForQuyen.Location = new System.Drawing.Point(0, 97);
+            this.ItemForQuyen.Control = this.QuyenComboBoxEdit;
+            this.ItemForQuyen.Location = new System.Drawing.Point(0, 73);
             this.ItemForQuyen.Name = "ItemForQuyen";
             this.ItemForQuyen.Size = new System.Drawing.Size(352, 24);
             this.ItemForQuyen.Text = "Quyền";
@@ -306,9 +290,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
             ((System.ComponentModel.ISupportInitialize)(this.TenDangNhapTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountLoginModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MatKhauTextEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.QuyenSearchLookUpEdit.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quyenAccountViewModelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuyenComboBoxEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
@@ -340,14 +322,12 @@ namespace QuanLyDeTaiKhoaHoc.Views
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private DevExpress.XtraEditors.SimpleButton btnForgot;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
-        private System.Windows.Forms.BindingSource quyenAccountViewModelBindingSource;
         private DevExpress.XtraEditors.TextEdit TenDangNhapTextEdit;
         private System.Windows.Forms.BindingSource accountLoginModelBindingSource;
         private DevExpress.XtraEditors.TextEdit MatKhauTextEdit;
-        private DevExpress.XtraEditors.SearchLookUpEdit QuyenSearchLookUpEdit;
-        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraLayout.LayoutControlItem ItemForTenDangNhap;
         private DevExpress.XtraLayout.LayoutControlItem ItemForMatKhau;
         private DevExpress.XtraLayout.LayoutControlItem ItemForQuyen;
+        private DevExpress.XtraEditors.ComboBoxEdit QuyenComboBoxEdit;
     }
 }

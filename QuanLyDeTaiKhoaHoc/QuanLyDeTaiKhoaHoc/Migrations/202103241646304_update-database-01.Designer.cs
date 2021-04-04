@@ -7,13 +7,13 @@ namespace QuanLyDeTaiKhoaHoc.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class addtablequyenaccount : IMigrationMetadata
+    public sealed partial class updatedatabase01 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(addtablequyenaccount));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(updatedatabase01));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103221635049_add-table-quyenaccount"; }
+            get { return "202103241646304_update-database-01"; }
         }
         
         string IMigrationMetadata.Source
