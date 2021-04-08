@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QuanLyDeTaiKhoaHoc.Model;
+using System.Net;
+using System.Net.Mail;
 
 namespace QuanLyDeTaiKhoaHoc
 {
@@ -20,13 +18,11 @@ namespace QuanLyDeTaiKhoaHoc
                 return false;
             }
         }
-        public static void SendMail()
+
+        public static void SendMail(string x_strSubject, string x_strContent, MailInfo x_objMailInfoFrom, MailInfo x_objMailInfoTo)
         {
-            var fromAddress = new MailAddress("from@gmail.com", "From Name");
-            var toAddress = new MailAddress("to@example.com", "To Name");
-            const string fromPassword = "fromPassword";
-            const string subject = "Subject";
-            const string body = "Body";
+            var fromAddress = new MailAddress(x_objMailInfoFrom.Email, x_objMailInfoFrom.Name);
+            var toAddress = new MailAddress(x_objMailInfoTo.Email, x_objMailInfoTo.Name);
 
             var smtp = new SmtpClient
             {
@@ -35,12 +31,12 @@ namespace QuanLyDeTaiKhoaHoc
                 EnableSsl = true,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
                 UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                Credentials = new NetworkCredential(fromAddress.Address, x_objMailInfoFrom.Pass)
             };
             using (var message = new MailMessage(fromAddress, toAddress)
             {
-                Subject = subject,
-                Body = body
+                Subject = x_strSubject,
+                Body = x_strContent
             })
             {
                 smtp.Send(message);

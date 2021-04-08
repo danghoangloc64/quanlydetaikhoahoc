@@ -78,15 +78,16 @@
     <Compile Include="DTO\QuyenViewModel.cs" />
     <Compile Include="ExtensionMethod\CommonLibrary.cs" />
     <Compile Include="ExtensionMethod\EmailMethod.cs" />
-    <Compile Include="Migrations\202103241646304_update-database-01.cs" />
-    <Compile Include="Migrations\202103241646304_update-database-01.designer.cs">
-      <DependentUpon>202103241646304_update-database-01.cs</DependentUpon>
+    <Compile Include="Migrations\202104041307117_init-database.cs" />
+    <Compile Include="Migrations\202104041307117_init-database.designer.cs">
+      <DependentUpon>202104041307117_init-database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\ChuNhiem.cs" />
     <Compile Include="Model\Infrastructure\AuditableEntity.cs" />
     <Compile Include="Model\Infrastructure\IAuditableEntity.cs" />
+    <Compile Include="Model\MailInfo.cs" />
     <Compile Include="Model\Quyen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,8 +116,8 @@
     <Compile Include="Views\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\202103241646304_update-database-01.resx">
-      <DependentUpon>202103241646304_update-database-01.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104041307117_init-database.resx">
+      <DependentUpon>202104041307117_init-database.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

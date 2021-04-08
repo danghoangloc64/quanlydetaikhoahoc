@@ -7,13 +7,13 @@ namespace QuanLyDeTaiKhoaHoc.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class updatedatabase01 : IMigrationMetadata
+    public sealed partial class initdatabase : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(updatedatabase01));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initdatabase));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103241646304_update-database-01"; }
+            get { return "202104041307117_init-database"; }
         }
         
         string IMigrationMetadata.Source

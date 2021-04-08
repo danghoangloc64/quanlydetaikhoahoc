@@ -1,9 +1,8 @@
 ﻿namespace QuanLyDeTaiKhoaHoc.Migrations
 {
-    using System;
     using System.Data.Entity.Migrations;
-    
-    public partial class updatedatabase01 : DbMigration
+
+    public partial class initdatabase : DbMigration
     {
         public override void Up()
         {
