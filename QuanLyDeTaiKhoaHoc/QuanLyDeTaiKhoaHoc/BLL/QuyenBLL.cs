@@ -33,7 +33,7 @@ namespace QuanLyDeTaiKhoaHoc.BLL
                 var dataQuyenAccounts = context.Quyens.Where(x => x.Deleted == false && x.Accounts.Any(y => y.Deleted == false && y.TenDangNhap == x_strUserName)).ToList();
                 foreach (var dataQuyenAccount in dataQuyenAccounts)
                 {
-                    listTenQuyen.Add(dataQuyenAccount.TenQuyen);
+                    listTenQuyen.Add(dataQuyenAccount.MaQuyen);
                 }
 
                 return listTenQuyen.ToArray();

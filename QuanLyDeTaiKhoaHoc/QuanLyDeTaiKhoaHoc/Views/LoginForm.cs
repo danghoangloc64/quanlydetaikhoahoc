@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors;
 using QuanLyDeTaiKhoaHoc.BLL;
+using QuanLyDeTaiKhoaHoc.DAL;
 using QuanLyDeTaiKhoaHoc.DTO;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,11 @@ namespace QuanLyDeTaiKhoaHoc.Views
             m_objAccountBLL = new AccountBLL();
             m_objAccountLoginModel = new AccountLoginModel();
             accountLoginModelBindingSource.DataSource = m_objAccountLoginModel;
+
+            using (var context = new QuanLyDeTaiKhoaHocContext())
+            {
+                context.SaveChanges();
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -67,6 +73,7 @@ namespace QuanLyDeTaiKhoaHoc.Views
 
         private void TenDangNhapTextEdit_Leave(object sender, EventArgs e)
         {
+            m_objAccountLoginModel.TenDangNhap = TenDangNhapTextEdit.Text;
             if (!string.IsNullOrEmpty(m_objAccountLoginModel.TenDangNhap))
             {
                 QuyenComboBoxEdit.Properties.Items.AddRange(m_objQuyenAccountBLL.GetListViewModelByUserName(m_objAccountLoginModel.TenDangNhap));

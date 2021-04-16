@@ -48,6 +48,9 @@
     <Reference Include="DevExpress.XtraGrid.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v20.2, Version=20.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="EASendMail, Version=7.7.0.8, Culture=neutral, PublicKeyToken=88adb80ecd66540b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EASendMail.7.7.0.8\lib\net461\EASendMail.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -77,6 +80,7 @@
     <Compile Include="DTO\ChuNhiemViewModel.cs" />
     <Compile Include="DTO\QuyenViewModel.cs" />
     <Compile Include="ExtensionMethod\CommonLibrary.cs" />
+    <Compile Include="ExtensionMethod\Constants.cs" />
     <Compile Include="ExtensionMethod\EmailMethod.cs" />
     <Compile Include="Migrations\202104041307117_init-database.cs" />
     <Compile Include="Migrations\202104041307117_init-database.designer.cs">
